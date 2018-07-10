@@ -31,7 +31,7 @@
     </form>
 </div>
 <div>
-    <form method="post">
+    <form method="post" action="/main">
         <input type="text" name="text" placeholder="Введите сообщение" />
         <input type="text" name="tag" placeholder="Тэг" />
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
@@ -40,7 +40,7 @@
 </div>
 <br />
 <div>Список сообщений</div>
-    <form method="post" action="filter">
+    <form method="post" action="/filter">
         <input type="text" name="filter">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <button type="submit">Найти</button>
@@ -49,6 +49,7 @@
     <b th:text="${message.id}">id</b>
     <span th:text="${message.text}">text</span>
     <i th:text="${message.tag}">tag</i>
+    <strong th:text="${message.getAuthorName()}">author</strong>
 </div>
 
 </body>
