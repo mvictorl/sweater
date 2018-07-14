@@ -27,6 +27,10 @@ public class Message {
     }
 
     public String getAuthorName() {
-        return author != null ? author.getUsername() : "<none>";
+        if (author == null || author.getUsername() == "")
+            return "<none>";
+        else
+            return author.getUsername();
+//        return author != null ? author.getUsername() : "<none>";
     }
 }
