@@ -67,6 +67,12 @@
             <version>1.18.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Mail -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>
